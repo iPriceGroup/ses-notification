@@ -1,0 +1,6 @@
+---
+# tasks/main.yml
+
+- name: mail | send email notification
+  shell: >
+    aws --region us-west-2 ses send-email --from "iPrice Bot <noreply@teamcity.ipricegroup.com>" --destination "ToAddresses={{ email }}" --message "Subject={Data={{ subject }},Charset=utf8},Body={Text={Data={{ body }},Charset=utf8}}"

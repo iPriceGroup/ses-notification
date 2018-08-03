@@ -1,0 +1,12 @@
+---
+# tests/test.yml
+
+- hosts: "localhost"
+
+  vars:
+    - email: "example@example.com"
+    - subject: "Message subject"
+    - body: "Message text"
+
+  roles:
+    - "ses-notification"
